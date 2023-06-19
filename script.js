@@ -31,6 +31,8 @@ class Inimigo {
     let top = this.inimigo.offsetTop;
     if (parseInt(top) >= borderlimits().y) {
       this.inimigo.remove();
+      alert("VOCÊ É RUIM!")
+      recarregarAPagina();
     }
     requestAnimationFrame(this.mover.bind(this));
   }
@@ -163,6 +165,10 @@ function borderlimits() {
   }
   return limit
 }
+
+function recarregarAPagina(){
+  window.location.reload();
+} 
 
 const inimigoInstances = [];
 
